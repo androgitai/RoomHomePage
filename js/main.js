@@ -48,5 +48,9 @@ const init = function () {
   menuIcon.addEventListener('click', toggleMenu);
   btnRight.addEventListener('click', nextSlide);
   btnLeft.addEventListener('click', prevSlide);
+  window.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
 };
 init();
